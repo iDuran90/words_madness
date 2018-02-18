@@ -1,0 +1,26 @@
+.col.m4.card-panel.center-align.letter-container {
+  min-height: 90px;
+}
+
+.col.m12.card-panel.center-align.generator-container {
+  padding-bottom: 11px;
+}
+
+#lexicon li {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+#lexicon input {
+  text-transform: uppercase;
+}
+
+#resultsReports {
+  padding: 15px;
+  font-size: 20px;
+}

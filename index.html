@@ -2,6 +2,7 @@
   <html>
     <head>
       <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+      <link type="text/css" rel="stylesheet" href="css/words.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
@@ -11,42 +12,115 @@
         <div class="col m12 card-panel center-align"><h2>Bienvenido a Words' Madness!</h2></div>
 
         <div class="col m3 card-panel center-align">
+        <div class="col m12 card-panel center-align generator-container">
           <h4>Generador de letras</h4>
-          <div class="col m4 card-panel center-align">
-            <h3 id="letter1">A</h3>
+          <div class="col m4 card-panel center-align letter-container">
+            <h3 id="letter1"></h3>
           </div>
-          <div class="col m4 card-panel center-align">
-            <h3 id="letter2">B</h3>
+          <div class="col m4 card-panel center-align letter-container">
+            <h3 id="letter2"></h3>
           </div>
-          <div class="col m4 card-panel center-align">
-            <h3 id="letter3">C</h3>
+          <div class="col m4 card-panel center-align letter-container">
+            <h3 id="letter3"></h3>
           </div>
-          <a id="searchBtn" class="waves-effect waves-light btn">Buscar</a>
+          <div class="col m6 left-align">
+            <a id="generateBtn" class="waves-effect waves-light btn">Generar Letras</a>
+          </div>
+          <div class="col m6 right-align">
+            <a id="searchBtn" class="waves-effect waves-light btn disabled">Buscar</a>
+          </div>
         </div>
+        <p><b>Descubridor: </b>Estudiante <span id="currentStudent"></span></p>
+        <div class="col m12 card-panel center-align">
+            <table>
+                <thead>
+                  <tr>
+                      <th>Estudiante</th>
+                      <th># de Oraciones</th>
+                  </tr>
+                </thead>
+        
+                <tbody id="board">
 
-        <div id="loading" class="col m9 card-panel center-align">
+                </tbody>
+              </table>
+        </div>
+      </div>
+
+        <div id="lexicon" class="col m9 card-panel center-align">
           <h4>Lexicón</h4>
           <p>Selecciona las palabras para usar en tú búsqueda</p>
-          <div class="col m4 card-panel center-align">
+          <div id="containerList1" class="col m4 card-panel center-align">
             <div class="input-field col m12">
-              <input placeholder="Escribir Palabra 1" id="word1" type="text" class="validate">
+              <input placeholder="Escribir Palabra" id="word1" type="text" class="validate">
             </div>
-            
+            <ul id="letter1options" class="collection"></ul>
           </div>
 
-          <div class="col m4 card-panel center-align">
+          <div id="containerList2" class="col m4 card-panel center-align">
             <div class="input-field col m12">
-              <input placeholder="Escribir Palabra 1" id="word1" type="text" class="validate">
+              <input placeholder="Escribir Palabra" id="word2" type="text" class="validate">
             </div>
+            <ul id="letter2options" class="collection"></ul>
           </div>
 
-          <div class="col m4 card-panel center-align">
+          <div id="containerList3" class="col m4 card-panel center-align">
             <div class="input-field col m12">
-              <input placeholder="Escribir Palabra 1" id="word1" type="text" class="validate">
+              <input placeholder="Escribir Palabra" id="word3" type="text" class="validate">
             </div>
+            <ul id="letter3options" class="collection"></ul>
           </div>
         </div>
       </div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+      <div class="modal-content">
+          <div class="row">
+        <div class="col m4 center-align push-m4">
+            <h5>Número de Estudiantes</h5>
+            <select id="number" class="browser-default">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6" selected>6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+        </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Empezar</a>
+      </div>
+    </div>
+
+      <!-- Modal Structure -->
+  <div id="modal2" class="modal">
+      <div class="modal-content">
+          <div class="row">
+        <div class="col m4 center-align push-m4">
+            <div id="resultsReports">
+              <span id="numberSentences">0</span> Oraciones encontradas.
+              Acumulado: <span id="currentSentences">0</span>.
+            </div>
+            <a id="showResultsBtn" class="waves-effect waves-light btn">Ver</a>
+            <a id="hideResultsBtn" class="waves-effect waves-light btn" style="display: none;">Ocultar</a>
+          </div>
+        <div  class="col m12">
+          <ul id="foundSentences" class="collection" style="display: none;"></ul>
+        </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" id="lendRolBtn" class="waves-effect waves-green btn-flat" style="display: none;">Ceder rol</a>
+        <a href="#!" id="continueRolBtn" class="waves-effect waves-green btn-flat" style="display: none;">Continuar buscando</a>
+        <a href="#!" id="lossRolBtn" class="waves-effect waves-green btn-flat">Aceptar</a>
+      </div>
+    </div>
 
       <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
