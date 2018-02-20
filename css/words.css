@@ -1,5 +1,5 @@
 .col.m4.card-panel.center-align.letter-container {
-  min-height: 90px;
+  min-height: 50px;
 }
 
 .col.m12.card-panel.center-align.generator-container {
@@ -23,4 +23,34 @@
 #resultsReports {
   padding: 15px;
   font-size: 20px;
+}
+
+.btn.waves-effect {
+  height: auto;
+  min-height: 20px;
+  line-height: 20px;
+  padding: 4px 4px;
+  margin: 4px 0px;
+}
+
+.collection .collection-item {
+  padding: 0!important;
+}
+
+#board td {
+  padding: 6px;
+}
+
+h5, p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.col.card-panel, .card-panel h3 {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+#searcherLabel {
+  padding: 4px;
 }
