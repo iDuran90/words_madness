@@ -16,7 +16,7 @@
   user-select: none;
 }
 
-#lexicon input {
+#lexicon input, #modal5 input {
   text-transform: uppercase;
 }
 

@@ -45,6 +45,9 @@
                 </tbody>
               </table>
         </div>
+        <div class="col m12 card-panel center-align">
+          <a id="initAddSearchBtn" class="waves-effect waves-light btn">Búsqueda Adicional</a>
+        </div>
       </div>
 
         <div id="lexicon" class="col m9 card-panel center-align">
@@ -77,9 +80,9 @@
   <div id="modal1" class="modal">
       <div class="modal-content">
           <div class="row">
-        <div class="col m4 center-align push-m4">
+        <div class="col m6 center-align push-m3">
             <h5>Número de Estudiantes</h5>
-            <select id="number" class="browser-default">
+            <select id="number" class="browser-default m2">
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
@@ -89,6 +92,16 @@
               <option value="8">8</option>
               <option value="9">9</option>
               <option value="10">10</option>
+              <option value="10">11</option>
+              <option value="10">12</option>
+              <option value="10">13</option>
+              <option value="10">14</option>
+              <option value="10">15</option>
+              <option value="10">16</option>
+              <option value="10">17</option>
+              <option value="10">18</option>
+              <option value="10">19</option>
+              <option value="10">20</option>
             </select>
         </div>
       </div>
@@ -148,6 +161,26 @@
       </div>
       <div class="modal-footer">
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
+      </div>
+    </div>
+
+    <!-- Modal Structure -->
+  <div id="modal5" class="modal">
+      <div class="modal-content">
+        <div class="row">
+        <div class="col m12 center-align">
+            <input placeholder="Escribir Palabra" id="addWord" type="text" class="validate"><a href="#!" id="executeAddSearchBtn" class="waves-effect waves-light btn">Buscar</a>
+        </div>
+        <div id="addNumberSentencesCtn" class="col m12 center-align" style="display:none;">
+        <span id="addNumberSentences">0</span> Oraciones encontradas.
+        </div>
+        <div  class="col m12">
+          <ul id="addFoundSentences" class="collection"></ul>
+        </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
       </div>
     </div>
 
