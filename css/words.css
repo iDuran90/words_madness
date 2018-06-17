@@ -1,4 +1,4 @@
-.col.m4.card-panel.center-align.letter-container {
+.col.m6.card-panel.center-align.letter-container {
   min-height: 50px;
 }
 
@@ -92,4 +92,9 @@ h5, p {
 
 .contenido.row {
   margin-bottom: 100px;
+}
+
+#containerList2,
+.letter2 {
+  display: none;
 }
