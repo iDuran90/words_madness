@@ -54,3 +54,17 @@ h5, p {
 #searcherLabel {
   padding: 4px;
 }
+
+.loader-spin {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100, 100, 100, 0.5);
+  z-index: 10;
+}
+
+.preloader-wrapper.big.active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
