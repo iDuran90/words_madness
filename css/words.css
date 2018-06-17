@@ -68,3 +68,28 @@ h5, p {
   top: 50%;
   left: 50%;
 }
+
+.footer.row {
+  padding: 10px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: cadetblue;
+  border-top: 1px solid;
+  color: white;
+  font-size: larger;
+  font-weight: 400;
+  margin-bottom: 0px;
+  height: 100px;
+  z-index: 10;
+}
+
+#link_download {
+  color: white!important;
+  font-size: larger;
+  text-decoration: underline!important;
+}
+
+.contenido.row {
+  margin-bottom: 100px;
+}
